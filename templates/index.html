@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fadeInUp {
+            animation: fadeInUp 1s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto p-6 bg-white shadow-xl rounded-lg w-full sm:w-96 fadeInUp">
+        <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-6">YouTube Downloader</h1>
+        <p class="text-center text-gray-600 mb-4">Simply paste the YouTube video URL and get the download options in your preferred quality.</p>
+        <form method="POST" action="/" class="space-y-6">
+            <div class="mb-4">
+                <label for="url" class="block text-lg font-medium text-gray-700">YouTube Video URL</label>
+                <input type="url" id="url" name="url" required class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 transition">
+            </div>
+            <button type="submit" class="w-full py-3 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition duration-300">Analyze & Get Options</button>
+        </form>
+
+        <div class="mt-6 text-center">
+            <p class="text-gray-500 text-sm">Made with ❤️ by YouTube Downloader Team</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
